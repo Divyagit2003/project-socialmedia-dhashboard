@@ -19,30 +19,24 @@ const Dashboard = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark d-flex justify-content-between" style={{ background: "linear-gradient(to right, #141e30, #243b55)", padding: "10px" }}>
-        <FaBars className="icon text-white ml-2 mr-3" size={24} onClick={toggleSidebar} style={{ cursor: "pointer" }} />
-        <h4 className="navbar-brand text-white" style={{ fontSize: "1.5rem", fontWeight: "bold" }}>Social Media Dashboard</h4>
-        <div className="d-flex align-items-center gap-3 text-white mr-3 ml-3">
-          <FaMoon className="icon" size={24} style={{ cursor: "pointer" }} />
-          <FaUserCircle className="icon" size={24} style={{ cursor: "pointer" }} />
-        </div>
-      </nav>
+      <nav
+  className="navbar navbar-expand-lg navbar-dark bg-dark"
+  style={{
+    background: "linear-gradient(to right, #141e30, #243b55)",
+    padding: "10px",
+    justifyContent: "center",
+  }}
+>
+  <div className="container-fluid justify-content-center">
+    <h4
+      className="navbar-brand text-white text-center"
+      style={{ fontSize: "1.5rem", fontWeight: "bold", margin: 0 }}
+    >
+      Social Media Dashboard
+    </h4>
+  </div>
+</nav>
 
-      {/* Sidebar */}
-      <div className={`offcanvas offcanvas-start ${showSidebar ? 'show' : ''}`} style={{ visibility: showSidebar ? 'visible' : 'hidden', width: "250px", backgroundColor: "#1a1a2e", color: "white", padding: "15px", borderRight: "2px solid #0f3460" }}>
-        <div className="offcanvas-header" style={{ borderBottom: "1px solid #0f3460", paddingBottom: "10px" }}>
-          <h5 className="offcanvas-title" style={{ fontSize: "18px", fontWeight: "bold" }}>Social Links</h5>
-          <button type="button" className="btn-close" style={{ backgroundColor: "white", borderRadius: "50%", padding: "5px" }} onClick={toggleSidebar}></button>
-        </div>
-        <div className="offcanvas-body" style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-        <Link to="/socialmedia/instagram">Instagram</Link>
-          <Link to="/socialmedia/youtube">YouTube</Link>
-          <Link to="/socialmedia/linkedin">LinkedIn</Link>
-          <Link to="/socialmedia/twitter">Twitter</Link>
-          <Link to="/socialmedia/facebook">Facebook</Link>
-          
-           </div>
-      </div>
 
       {/* Main Content Section */}
       <div className="container mt-4">
