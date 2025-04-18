@@ -1,12 +1,11 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import BarGraph from "./BarGraph";
-import DashboarSecbarChar from "./DashboardSecbarChar";
+import DashboardSecbarChar from "./DashboardSecbarChar";
 
-// import "./Facebook.css";
 const Facebook = () => {
   return (
-    <div className="container">
+    <div>
       {/* Navbar */}
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-dark text-center">
@@ -19,53 +18,56 @@ const Facebook = () => {
 
       {/* Stats Cards */}
       <div className="container">
-
-      <div className="row justify-content-center mt-4">
-        <div className="col-md-2">
-          <div className="card text-center p-3">
-            <h5>Impression</h5>
-            <p className="display-6">354</p>
-            <p className="positive">Fab 2025: 147</p>
+        <div className="row justify-content-center mt-4">
+          <div className="col-md-2">
+            <div className="card text-center p-3">
+              <h5>Impression</h5>
+              <p className="display-6">354</p>
+              <p className="positive">Fab 2025: 147</p>
+            </div>
           </div>
-        </div>
 
-        <div className="col-md-2">
-          <div className="card text-center p-3">
-            <h5>Followers</h5>
-            <p className="display-6">294</p>
-            <p className="positive">Fab 2025: 187</p>
+          <div className="col-md-2">
+            <div className="card text-center p-3">
+              <h5>Followers</h5>
+              <p className="display-6">294</p>
+              <p className="positive">Fab 2025: 187</p>
+            </div>
           </div>
-        </div>
 
-        <div className="col-md-2">
-          <div className="card text-center p-3">
-            <h5>Reaches</h5>
-            <p className="display-6">405</p>
-            <p className="positive">Fab 2025: 251</p>
+          <div className="col-md-2">
+            <div className="card text-center p-3">
+              <h5>Reaches</h5>
+              <p className="display-6">405</p>
+              <p className="positive">Fab 2025: 251</p>
+            </div>
           </div>
-        </div>
 
-        <div className="col-md-2">
-          <div className="card text-center p-3">
-            <h5>Profile Views</h5>
-            <p className="display-6">463</p>
-            <p className="positive">Fab 2025: 173</p>
+          <div className="col-md-2">
+            <div className="card text-center p-3">
+              <h5>Profile Views</h5>
+              <p className="display-6">463</p>
+              <p className="positive">Fab 2025: 173</p>
+            </div>
           </div>
-        </div>
 
-        <div className="col-md-2">
-          <div className="card text-center p-3">
-            <h5>Reach Rate</h5>
-            <p className="display-6">14.82%</p>
-            <p className="positive">Fab 2025: 5.9%</p>
+          <div className="col-md-2">
+            <div className="card text-center p-3">
+              <h5>Reach Rate</h5>
+              <p className="display-6">14.82%</p>
+              <p className="positive">Fab 2025: 5.9%</p>
+            </div>
           </div>
-        </div>
 
-        <div className="graph-container">
-          <BarGraph />
-          <DashboarSecbarChar />
+          <div className="graph-container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "20px", width: "100%" }}>
+  <div style={{ flex: "1", maxWidth: "50%" }}>
+    <BarGraph />
+  </div>
+  <div style={{ flex: "1", maxWidth: "50%" }}>
+    <DashboardSecbarChar />
+  </div>
+</div>
         </div>
-      </div>
       </div>
     </div>
   );

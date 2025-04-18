@@ -58,7 +58,7 @@ const BarGraph = () => {
       };
   return (
     <div>
-      <h1 className='text-dark'>Social Interactions</h1>
+      
       <Line data= {data} options={config.options}/>
 
     </div>

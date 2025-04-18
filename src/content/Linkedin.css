@@ -1,0 +1,140 @@
+/* Main container */
+.dashboard-container {
+  padding: 30px;
+  background: #f4f8fb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0077b5;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  margin-left: 15px;
+  font-size: 28px;
+}
+
+.header-info {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+}
+
+/* Grid Layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* Stats section */
+.stats-section h2 {
+  margin-bottom: 20px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.metric-card {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.metric-card h4 {
+  margin-bottom: 10px;
+  color: #0077b5;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-value .change {
+  font-size: 14px;
+  color: green;
+}
+
+/* Chart section */
+.my-chart {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Right column */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Traffic and revenue cards */
+.traffic-card,
+.revenue-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.traffic-content {
+  margin-top: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.revenue-list {
+  margin-top: 15px;
+}
+
+.campaign-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+/* Image */
+.live-img {
+  padding: 10px;
+  text-align: center;
+}
+
+.live-img .img2 {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+}

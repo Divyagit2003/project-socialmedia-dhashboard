@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Login from './Login';
 import Signup from './Signup';
 import { useNavigate } from 'react-router-dom';
-import "../styles/loginsign.css";
+import "../content/loginsign.css";
 
 
 export default function LoginSign() {

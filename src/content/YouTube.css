@@ -1,0 +1,93 @@
+/* General styling */
+#youtube {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    padding: 1rem;
+  }
+  
+  /* Header section */
+  #youtube .container-fluid.bg-light {
+    background-color: #fff !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Stat cards */
+  .stats-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 1rem;
+    margin: 0.5rem;
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .stats-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Chart containers */
+  .chart-container {
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Analytics cards */
+  .analytics-card {
+    background-color: white;
+    border-radius: 15px;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  .analytics-header {
+    color: #c4302b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .list-group-item {
+    border: none;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  /* Image styling */
+  .stats-card img {
+    border-radius: 8px;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .stats-card,
+    .analytics-card {
+      width: 90% !important;
+    }
+  
+    .chart-container {
+      width: 100% !important;
+      margin: 1rem 0;
+    }
+  
+    .container-fluid.d-flex {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+  
+    #head {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+  

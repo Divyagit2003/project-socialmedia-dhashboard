@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/loginsign.css";
+import "../content/loginsign.css";
 
 
 function Login({ onOpen }) {

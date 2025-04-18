@@ -1,0 +1,92 @@
+/* General container */
+.container-1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: linear-gradient(135deg, #e0eafc, #cfdef3);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Login box */
+  .screen {
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	width: 350px;
+	padding: 40px;
+  }
+  
+  /* Heading */
+  .page_heading {
+	text-align: center;
+	font-size: 28px;
+	color: #333;
+	margin-bottom: 20px;
+	font-weight: 600;
+  }
+  
+  /* Input Fields */
+  .login__field {
+	margin-bottom: 20px;
+  }
+  
+  .login__input {
+	width: 100%;
+	padding: 12px 15px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	outline: none;
+	transition: 0.3s;
+	font-size: 16px;
+  }
+  
+  .login__input:focus {
+	border-color: #007bff;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Login Button */
+  .button.login__submit {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	width: 100%;
+	padding: 12px;
+	border-radius: 8px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+  }
+  
+  .button.login__submit:hover {
+	background-color: #0056b3;
+  }
+  
+  /* Button text */
+  .button__text {
+	font-weight: 500;
+  }
+  
+  /* Sign-up Link */
+  .link {
+	text-align: center;
+	margin-top: 15px;
+	font-size: 14px;
+	color: #555;
+  }
+  
+  .link button {
+	background: none;
+	border: none;
+	color: #007bff;
+	cursor: pointer;
+	font-size: 14px;
+	margin-top: 5px;
+	text-decoration: underline;
+  }
+  
+  .link button:hover {
+	color: #0056b3;
+  }
+  

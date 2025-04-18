@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Home.css';
-import { FaSearch } from 'react-icons/fa';
+import '../content/Home.css';
 import { Link } from 'react-router-dom';
+import DemoSlider from './DemoSlider';
 
 function Home() {
     const navigate = useNavigate();
@@ -10,7 +10,7 @@ function Home() {
     useEffect(() => {
         const isLoggedIn = localStorage.getItem("isLoggedIn");
         if (!isLoggedIn) {
-            navigate("/"); 
+            navigate("/");
         }
     }, [navigate]);
 
@@ -20,144 +20,63 @@ function Home() {
     };
 
     return (
-        <div>
-            <div className='main '>
-                {/* Navbar */}
-                <nav className="nv1 navbar navbar-expand-lg navbar-light bg-light">
-                    <div className="container-fluid">
-                        <Link className="navbar-brand" to="#">Sociallytics</Link>
-                        <button 
-                            className="navbar-toggler" 
-                            type="button" 
-                            data-bs-toggle="collapse" 
-                            data-bs-target="#navbarSupportedContent" 
-                            aria-controls="navbarSupportedContent" 
-                            aria-expanded="false" 
-                            aria-label="Toggle navigation"
-                        >
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
+        <div className="dashboard-container">
+            {/* Navbar */}
+            <nav className="dashboard-navbar navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="#">Sociallytics</Link>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
 
-                        <div className="mainnav collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav mx-auto">
-                                <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/socialmedia">Social Media Activity</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/about">About Us</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/contact">Contact Us</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/setting">Settings</Link>
-                                </li>
-                            </ul>
-
-                            <form className="d-flex bar">
-                                <input className="srch form-control" type="search" placeholder="Search" aria-label="Search" />
-                                <FaSearch className="icon-1" />
-                            </form>
-
-                            {/* Logout Button */}
-                            <button className="btn btn-danger ms-3" onClick={handleLogout}>Logout</button>
-                        </div>
-                    </div>
-                </nav>
-
-                <div className='main-home' style={pages.div}>
-
-                    {/* Left Page */}
-                    <div id='left' style={pages.content}>
-                        <div className='justify-content-center mt-5 p-5 ms-3'>
-                            <h1 className='text-dark'>Admin DashBoard<br />UI Kit</h1>
-                            <div className='box ms-2 mt-4 text-start'>
-                                <li className="li-font"><span className="icon"></span>Social Media Tracking</li>
-                                <li className="li-font"><span className="icon"></span>Multiple Interactive Components</li>
-                                <li className="li-font"><span className="icon"></span>Network</li>
-                                <li className="li-font"><span className="icon"></span>Performance Metrics</li>
-                                <li className="li-font"><span className="icon"></span>Improved Engagement</li>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Page */}
-                    <div className='images' style={pages.Img}>
-                        <div style={pages.box}>
-                            <img src="../assests/image1.png" alt="Image 1" style={pages.image1} />
-                            <img src="../assests/image2.png" alt="Image 2" style={pages.image2} />
-                            <img src="../assests/image3.png" alt="Image 3" style={pages.image3} />
-                        </div>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav mx-auto">
+                            <li className="nav-item">
+                                <Link className="nav-link active" to="/home">Home</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/socialmedia">Social Media Activity</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/about">About Us</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact">Contact Us</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/setting">Settings</Link>
+                            </li>
+                        </ul>
+                        <button className="btn btn-danger ms-3" onClick={handleLogout}>Logout</button>
                     </div>
                 </div>
+            </nav>
+
+            {/* Dashboard Welcome Section */}
+            <div className="dashboard-welcome text-center mt-5">
+                <h1>Welcome to Sociallytics Dashboard</h1>
+                <p className="text-muted">Track and analyze your performance across different social media platforms</p>
+                
+                <div className="platform-links mt-4">
+                    <Link to="/socialmedia/instagram" className="platform-card insta">Instagram</Link>
+                    <Link to="/socialmedia/youtube" className="platform-card yt">YouTube</Link>
+                    <Link to="/socialmedia/facebook" className="platform-card fb">Facebook</Link>
+                    <Link to="/socialmedia/twitter" className="platform-card tw">Twitter</Link>
+                    <Link to="/socialmedia/linkedin" className="platform-card ln">LinkedIn</Link>
+                </div>
             </div>
+
+            <DemoSlider/>
         </div>
     );
 }
-
-const pages = {
-    div: {
-        width: '100%',
-        height: '100%',
-        backgroundColor: '#4423c7ba',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '20px'
-    },
-    content: {
-        width: '40%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    Img: {
-        width: '40%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'relative'  
-    },
-    box: {
-        display: 'flex',
-        flexDirection: 'column',  
-        alignItems: 'center',
-        position: 'relative',
-        gap: '0px',  
-    },
-    image1: {
-        width: '520px',
-        height: 'auto',
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        zIndex: '3',
-        boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.3)',
-        borderRadius: '12px',
-    },
-    image2: {
-        width: '520px',
-        height: 'auto',
-        position: 'absolute',
-        top: '70px',
-        left: '30px',
-        zIndex: '2',
-        boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.3)',
-        borderRadius: '12px',
-    },
-    image3: {
-        width: '520px',
-        height: 'auto',
-        position: 'absolute',
-        top: '140px',
-        left: '60px',
-        zIndex: '1',
-        boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.3)',
-        borderRadius: '12px',
-    }
-};
 
 export default Home;

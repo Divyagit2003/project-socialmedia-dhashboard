@@ -1,55 +1,91 @@
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import BarGraph from "./BarGraph";
-import "../styles/InstaDashboard.css";
-
+import '../content/InstaDashboard.css';
 
 const InstaDashboard = () => {
   return (
     <div>
       <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark text-center">
-          <a className="navbar-brand text-white mx-auto" href="#">
+        <div className="dashboard-header">
+          <h2>
             <FaInstagram size={40} color="#E4405F" />
-            Instagram Profile
-          </a>
-        </nav>
-      </div>
-
-      <div className="container">
-        <div className="dashboard-header text-center">
+            Instagram
+          </h2>
           <p>
             View the performance metrics of your key profile from the reporting.
           </p>
         </div>
 
-        <div className="metrics">
-          <div className="card">
-            <div className="card-title">Engagement</div>
-            <div className="card-body">
-              <span className="metric-value">2,218</span>
-              <span className="metric-change negative">-3.5%</span>
+        <nav
+          className="navbar navbar-expand-lg navbar-light bg-light"
+          style={{ width: "500px" }}
+        >
+          <a className="navbar-brand" href="#">
+            Overview
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div>
+            <div className="navbar-nav">
+              <a className="nav-link" href="#">
+                Engagment{" "}
+              </a>
+              <a className="nav-link" href="#">
+                Audiences{" "}
+              </a>
+              <a className="nav-link" href="#">
+                Impressions
+              </a>
+              <a className="nav-link" href="#">
+                Network
+              </a>
             </div>
           </div>
-          <div className="card">
-            <div className="card-title">Profile Views</div>
-            <div className="card-body">
-              <span className="metric-value">1,630</span>
-              <span className="metric-change negative">-4%</span>
+        </nav>
+
+        <div className="container mt-5">
+          <div className="row">
+            <div className="col-md-3 mb-4">
+              <div className="card text-center p-3">
+                <h5>Facebook Page Likes</h5>
+                <p className="display-6">15,342</p>
+                <p>LIKES</p>
+                <p className="positive">+320 Today</p>
+              </div>
             </div>
-          </div>
-          <div className="card">
-            <div className="card-title">Impressions</div>
-            <div className="card-body">
-              <span className="metric-value">1,914</span>
-              <span className="metric-change">+1.5%</span>
+            <div className="col-md-3 mb-4">
+              <div className="card text-center p-3">
+                <h5>Facebook Page Likes</h5>
+                <p className="display-6">15,342</p>
+                <p>LIKES</p>
+                <p className="positive">+320 Today</p>
+              </div>
             </div>
-          </div>
-          <div className="card">
-            <div className="card-title">Account Reach</div>
-            <div className="card-body">
-              <span className="metric-value">2,104</span>
-              <span className="metric-change">+5%</span>
+            <div className="col-md-3 mb-4">
+              <div className="card text-center p-3">
+                <h5>Facebook Page Likes</h5>
+                <p className="display-6">15,342</p>
+                <p>LIKES</p>
+                <p className="positive">+320 Today</p>
+              </div>
+            </div>
+            <div className="col-md-3 mb-3">
+              <div className="card text-center p-3">
+                <h5>Facebook Page Likes</h5>
+                <p className="display-6">15,342</p>
+                <p>LIKES</p>
+                <p className="positive">+320 Today</p>
+              </div>
             </div>
           </div>
         </div>

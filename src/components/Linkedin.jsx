@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/Linkedin.css';
+import '../content/Linkedin.css';
 import LinkedinChart from "./LinkedinChart";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
