@@ -6,13 +6,13 @@ const DemoSlider = () => {
       <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
         <div className="carousel-inner" style={{ width: '100%', height: '500px' }}>
           <div className="carousel-item active">
-            <img src='../assests/social2.jpg' className="d-block w-100" alt="..." style={{ height: '500px', objectFit: 'cover' }} />
+            <img src='/assests/social2.jpg' className="d-block w-100" alt="Slide 1" style={{ height: '500px', objectFit: 'cover' }} />
           </div>
           <div className="carousel-item">
-            <img src='../assests/social1.jpg' className="d-block w-100" alt="..." style={{ height: '500px', objectFit: 'cover' }} />
+            <img src='/assests/social1.jpg' className="d-block w-100" alt="Slide 2" style={{ height: '500px', objectFit: 'cover' }} />
           </div>
           <div className="carousel-item">
-            <img src='../assests/social3.jpg' className="d-block w-100" alt="..." style={{ height: '500px', objectFit: 'cover' }} />
+            <img src='/assests/social3.jpg' className="d-block w-100" alt="Slide 3" style={{ height: '500px', objectFit: 'cover' }} />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -26,6 +26,6 @@ const DemoSlider = () => {
       </div>
     </div>
   );
-}
+};
 
 export default DemoSlider;
